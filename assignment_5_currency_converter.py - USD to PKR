@@ -1,0 +1,10 @@
+import streamlit as st
+
+st.title("Currency Converter (USD to PKR)")
+
+usd = st.number_input("Enter amount in USD:")
+conversion_rate = 280  # update manually if needed
+
+if st.button("Convert"):
+    pkr = usd * conversion_rate
+    st.write(f"${usd} = Rs.{pkr}")
